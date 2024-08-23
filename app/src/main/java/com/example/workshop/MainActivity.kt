@@ -35,7 +35,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     CounterScreen(modifier = Modifier
                         .padding(innerPadding)
-                        .fillMaxSize())
+                        .fillMaxSize()
+                    )
                 }
             }
         }
@@ -44,7 +45,7 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun CounterScreen (modifier: Modifier = Modifier) {
+fun CounterScreen(modifier: Modifier = Modifier) {
 
     var count by remember { mutableStateOf(0) }
 
@@ -76,6 +77,6 @@ fun CounterScreen (modifier: Modifier = Modifier) {
 
 @Preview (showBackground = true)
 @Composable
-fun CounterScreenPreview(){
+fun CounterScreenPreview() {
     CounterScreen()
 }
